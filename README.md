@@ -1,3 +1,4 @@
+
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/Flask-3.x-000000?style=for-the-badge&logo=flask&logoColor=white" />
@@ -294,3 +295,7 @@ This project was built as a hands-on learning exercise covering:
 <p align="center">
   <sub>Built while learning from <a href="https://www.youtube.com/@SheryiansAISchool">Sheryians AI School</a> · Vdo by Akarsh Vayas</sub>
 </p>
+=======
+# EmotionAI
+AI powered software for emotion analysis using NLP
+
