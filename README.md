@@ -295,7 +295,5 @@ This project was built as a hands-on learning exercise covering:
 <p align="center">
   <sub>Built while learning from <a href="https://www.youtube.com/@SheryiansAISchool">Sheryians AI School</a> · Vdo by Akarsh Vayas</sub>
 </p>
-=======
-# EmotionAI
-AI powered software for emotion analysis using NLP
+
 
