@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emotion AI — NLP Classifier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Header -->
+    <header class="dashboard-header">
+      <div class="header-badge">NLP CLASSIFIER</div>
+      <h1 class="header-title">Emotion AI</h1>
+      <p class="header-subtitle">NLP-Powered Emotion Classifier</p>
+    </header>
+    
+    <!-- Main Content Grid -->
+    <div class="main-grid">
+      
+      <!-- Left Column -->
+      <div class="left-col">
+        
+        <!-- Input Card -->
+        <div class="card input-card">
+          <div class="card-title-row">
+            <h2>Analyze Text</h2>
+            <span class="card-indicator">Ready</span>
+          </div>
+          <div class="textarea-wrapper">
+            <textarea id="text-input" placeholder="Type or paste any text to analyze its emotion..." rows="4"></textarea>
+            <div class="textarea-glow"></div>
+          </div>
+          <button id="analyze-btn" class="glow-button">
+            <span class="btn-icon">⚡</span>
+            <span class="btn-text">Analyze Emotion</span>
+            <span class="btn-spinner" hidden></span>
+          </button>
+          <div id="cleaned-text-display" class="cleaned-box" hidden>
+            <span class="cleaned-label">Preprocessed:</span>
+            <span id="cleaned-text" class="cleaned-content"></span>
+          </div>
+        </div>
+        
+        <!-- Result Card (hidden initially) -->
+        <div class="card result-card" id="result-card" hidden>
+          <div class="result-header">
+            <div class="emoji-container">
+              <span class="emotion-emoji" id="result-emoji">😊</span>
+            </div>
+            <div class="result-meta">
+              <h2 id="result-emotion">Joy</h2>
+              <p class="confidence-text" id="result-confidence">87% Confident</p>
+            </div>
+          </div>
+          <!-- Confidence bars for all 6 emotions -->
+          <div class="confidence-bars" id="confidence-bars">
+            <!-- JS will populate: for each emotion a row with label, bar, percentage -->
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Column -->
+      <div class="right-col">
+        
+        <!-- Stats Card -->
+        <div class="card stats-card">
+          <h2>📊 Model Stats</h2>
+          <div class="stats-grid" id="stats-grid">
+            <!-- 4 mini stat items: TF-IDF Accuracy, BoW Accuracy, Total Samples, Emotions -->
+            <div class="stat-item">
+              <span class="stat-value" id="stat-tfidf">—</span>
+              <span class="stat-label">TF-IDF Accuracy</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value" id="stat-bow">—</span>
+              <span class="stat-label">BoW Accuracy</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value" id="stat-samples">—</span>
+              <span class="stat-label">Total Samples</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value" id="stat-emotions">—</span>
+              <span class="stat-label">Emotions</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Emotion Distribution Card -->
+        <div class="card distribution-card">
+          <h2>📈 Training Distribution</h2>
+          <div id="distribution-bars" class="distribution-bars">
+            <!-- JS will populate: horizontal bars showing count for each emotion in training data -->
+          </div>
+        </div>
+        
+        <!-- History Card -->
+        <div class="card history-card">
+          <h2>🕒 Prediction History</h2>
+          <div id="history-list" class="history-list">
+            <p class="empty-state">No predictions yet. Try analyzing some text!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer Credit -->
+    <footer class="credit-footer">
+      <p>Built while learning from <a href="https://www.youtube.com/@SheryiansAISchool" target="_blank" rel="noopener">Sheryians AI School</a> · Vdo by Akarsh Vayas</p>
+    </footer>
+  </div>
+  
+  <script src="/static/script.js"></script>
+</body>
+</html>
